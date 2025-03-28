@@ -1,4 +1,4 @@
-// 1. Write code to get array of names from given array of users
+// Write code to get names from given array of users  
 const users = [
     {
         id: 1,
