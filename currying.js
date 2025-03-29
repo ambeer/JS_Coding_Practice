@@ -6,5 +6,4 @@ const multiply = (num1) => {
 }
 
 let output = multiply(3)(5);
-
 console.log(output);
