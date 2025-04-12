@@ -1,19 +1,18 @@
-// create a debounce function
-const debounce = (fun, time = 1000) => {
-    let timer = 0;
-    return (...args) => {
-        //console.log('inner function ', args);
-        clearTimeout(timer);   
-        timer = setTimeout(() => {
-            fun.apply(this, args);
-        }, time);
+let getData = function(){
+    console.log("call api to get the data");
+}
+
+const debounce = function(fn, d){
+    let timer;
+    return function(){
+        let context = this;
+        let args = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(() =>{
+            fn.apply(context, args);
+        }, 300);
     }
-
 }
 
-const saveInput = (name) => {
-    console.log("your input is => ", name);
-}
 
-let processChange = debounce(saveInput, 2000);
-processChange('Gopal');
+const betterFunction = debounce(getData, 300);

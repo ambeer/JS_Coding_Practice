@@ -1,0 +1,50 @@
+RxJs
+--------------------------------
+- The best way to subscribe rxjs streams is using angular async pipe which will subscribe and unsubscribe the streams
+- We can use pipe(fn1, fn2, fn3) to work on multiple streams
+- map() is the most used rxjs function which is used to transform the data. We use map inside pipe()   	
+- map() used to transform the data from one stream to another stream
+	usernames$ = this.users$.pipe(map(users) => users.map((user) => user.name)));
+- filter() used to filter the stream based on condition
+	filterUsers = this.users$.pipe(filter(users) => users.every((user) => user.isActive)));
+
+Angular
+    Dependency Injection Benefits
+        Loose coupling - Easily modified and testable
+        Reusability - Separating dependencies from components and services, they can be reused across different parts of the application
+        Testability - DI makes it easier to test c omponents and services by allowing you to mock
+        Maintainability - DI helps to reducing the complexity of managing dependencies  and making it easier to refactor code
+        Scalability - DI allows to add new components and services with out worry about managing dependencies manually
+   
+   What are the app optimization technique?
+      
+        runOutsideAngular heavy scripts or 3rd party libraries
+        detach view from change detection
+        lazy-load components via dynamic imports
+        avoid many *ngIfs, ngSwitches in templates and use dynamic components
+        virtual scroll for large lists
+        server-side pagination
+        caching, service-workers
+        Optimizing bundling and preloading
+        Using trackBy in ngFor
+        Cache HTTP calls and Cache static content using Angular PWA
+        WebWorkers; preloading; runOutsideAngular, cdr.detach, reatach; memoization function etc.
+   
+   How do you handle errors in angular application?
+   
+        Error handling service - Customer service to catch errors
+        Global Error Handling - Using Angular 'ErrorHandler' to catch and handle errors globally
+        Observable Error Handling - When using obaservable, we can use catchError operator to catch and handle errors
+        Form validators - Use angular build in form validations to prevent errros
+        Logging - Use console logging and debug errors
+        Error interceptors - Use angular http interceptors to handle http request and response errors
+   
+   How to communicate b/w components without parent child relation ship?
+   
+        Services
+        EventBus
+        Using RxJS observable
+        MessaingService
+   
+
+

@@ -33,8 +33,12 @@ class Manager extends Employee{
     getDepartment(){
         return this.department;
     }
-}
+//     getSalary(){
+//         return "10000";
+//     }
+ }
 
 let manager = new Manager(200, 'Advaith');
 manager.setDepartment('Development');
+manager.getSalary();
 console.log(manager);
